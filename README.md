@@ -79,24 +79,31 @@ The script additionally disables:
 
 ## Usage
 
-### Run (both Reader + Acrobat)
+### Local run (recommended)
+
+#### Run with the default PowerShell execution policy
 ```powershell
 .\Disable-AdobeOnlineFeatures.ps1
 ```
 
-### Only Reader
+#### Run with ExecutionPolicy bypass (common in locked-down environments)
 ```powershell
-.\Disable-AdobeOnlineFeatures.ps1 -ReaderOnly
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Disable-AdobeOnlineFeatures.ps1
 ```
 
-### Only Acrobat
+#### Only Reader
 ```powershell
-.\Disable-AdobeOnlineFeatures.ps1 -AcrobatOnly
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Disable-AdobeOnlineFeatures.ps1 -ReaderOnly
 ```
 
-### Dry-run (show what would be written)
+#### Only Acrobat
 ```powershell
-.\Disable-AdobeOnlineFeatures.ps1 -WhatIf
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Disable-AdobeOnlineFeatures.ps1 -AcrobatOnly
+```
+
+#### Dry-run (show what would be written)
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Disable-AdobeOnlineFeatures.ps1 -WhatIf
 ```
 
 ### After applying
