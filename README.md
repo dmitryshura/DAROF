@@ -1,4 +1,5 @@
-# Disable Adobe Acrobat / Reader Online Features (Windows, DC)
+# D.A.R.O.F. :
+# Disable Adobe Reader Online Features (Windows, DC) 
 
 This repository provides a PowerShell script that applies **Adobe Enterprise Toolkit (ETK)** “lockable” policies (Windows registry) to **disable as many online / cloud-facing features as possible** in:
 
