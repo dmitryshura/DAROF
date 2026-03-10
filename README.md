@@ -12,6 +12,41 @@ It targets Document Cloud services (sign-in UI, share/review, sign, sync), 3rd�
 
 ---
 
+## Usage
+
+### Local run (recommended)
+
+#### Run with the default PowerShell execution policy
+```powershell
+.\Disable-AdobeOnlineFeatures.ps1
+```
+
+#### Run with ExecutionPolicy bypass (common in locked-down environments)
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Disable-AdobeOnlineFeatures.ps1
+```
+
+#### Only Reader
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Disable-AdobeOnlineFeatures.ps1 -ReaderOnly
+```
+
+#### Only Acrobat
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Disable-AdobeOnlineFeatures.ps1 -AcrobatOnly
+```
+
+#### Dry-run (show what would be written)
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Disable-AdobeOnlineFeatures.ps1 -WhatIf
+```
+
+### After applying
+- Close Acrobat/Reader completely and re-open
+- If UI elements persist, log off / reboot (some components cache UI state)
+
+---
+
 ## What the script does
 
 ### 1) Writes enterprise “policy” registry values
@@ -74,41 +109,6 @@ The script additionally disables:
 - Windows PowerShell 5.1+ or PowerShell 7+
 - **Run as Administrator**
 - Acrobat/Reader **DC** (Continuous or Classic track; some keys are track-specific)
-
----
-
-## Usage
-
-### Local run (recommended)
-
-#### Run with the default PowerShell execution policy
-```powershell
-.\Disable-AdobeOnlineFeatures.ps1
-```
-
-#### Run with ExecutionPolicy bypass (common in locked-down environments)
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Disable-AdobeOnlineFeatures.ps1
-```
-
-#### Only Reader
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Disable-AdobeOnlineFeatures.ps1 -ReaderOnly
-```
-
-#### Only Acrobat
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Disable-AdobeOnlineFeatures.ps1 -AcrobatOnly
-```
-
-#### Dry-run (show what would be written)
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Disable-AdobeOnlineFeatures.ps1 -WhatIf
-```
-
-### After applying
-- Close Acrobat/Reader completely and re-open
-- If UI elements persist, log off / reboot (some components cache UI state)
 
 ---
 
