@@ -66,9 +66,9 @@ $settings = @(
     @{ SubKey = 'cServices'; Name = 'bToggleFSSSignatureSaving'; Value = 1 },
 
     # ====== Fill & Sign integration (online-adjacent) ======
-    @{ SubKey = 'cServices'; Name = 'bToggleFillSign'; Value = 1 },
+    @{ SubKey = 'cServices'; Name = 'bToggleFillSign'; Value = 0 },
     # 0 = hide "Send a Copy" button
-    @{ SubKey = 'cServices'; Name = 'bToggleSendACopy'; Value = 0 },
+    @{ SubKey = 'cServices'; Name = 'bToggleSendACopy'; Value = 1 },
 
     # ====== Document Cloud storage + 3rd party connectors ======
     @{ SubKey = 'cServices'; Name = 'bToggleDocumentCloud'; Value = 1 },
@@ -158,4 +158,5 @@ foreach ($root in $policyRoots) {
 }
 
 Write-Host "Done. Policies written for: $($products -join ', ') ($Version) in both Policies and WOW6432Node\Policies."
+
 Write-Host "Tip: close Acrobat/Reader fully and re-open (or reboot) to ensure UI refresh."
