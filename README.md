@@ -126,8 +126,8 @@ Below is the **intent** of the settings the script writes. All values are **DWOR
 | `bToggleAdobeSign` | `1` | Disable Acrobat Sign (“Send for Signature”) |
 | `bToggleManageSign` | `1` | Hide Signature tab / sign tracking UI |
 | `bToggleFSSSignatureSaving` | `1` | Hide “Save signature in the cloud” UI |
-| `bToggleFillSign` | `1` | Disable Fill & Sign |
-| `bToggleSendACopy` | `0` | Hide “Send a Copy” in Fill & Sign |
+| `bToggleFillSign` | `0` | Enable offline Fill & Sign |
+| `bToggleSendACopy` | `1` | Show “Send a Copy” in Fill & Sign |
 | `bToggleDocumentCloud` | `1` | Disable Document Cloud storage |
 | `bToggleWebConnectors` | `1` | Disable 3rd-party storage connectors (Continuous track) |
 | `bBoxConnectorEnabled` | `0` | Disable Box connector (override) |
